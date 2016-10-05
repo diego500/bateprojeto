@@ -18,6 +18,19 @@
 
 			.formulario{
 				position:absolute; 
+				top:20%; 
+				left:70%; 
+				width:500px; 
+				height:200px; 
+				background:white;
+				border-radius:6px;
+				margin-left:-250px;
+				margin-top:-100px;
+				padding:10px;
+				box-shadow:#ccc 2px 1px 20px;
+			}
+                        .formulario2{
+				position:absolute; 
 				top:50%; 
 				left:50%; 
 				width:500px; 
@@ -65,7 +78,7 @@
 
 	<body>
 		<div class="formulario">
-			<h1>Bem vindo ao chat, faça login</h1>
+			<h1>Seja Bem vindo</h1>
 			<?php
 				if(isset($_POST['acao']) && $_POST['acao'] == 'logar'){
 					$email = strip_tags(trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING)));
@@ -92,6 +105,7 @@
 					}
 				}
 			?>
+                        
 			<form action="" method="post" enctype="multipart/form-data">
 				<label>
 					<span>Informe seu e-mail</span>
@@ -99,7 +113,11 @@
 				</label>
 				<input type="hidden" name="acao" value="logar" />
 				<input type="submit" value="Entrar" class="botao right" />
+                              <a href="/batepapo/bateprojeto/cadastro.php">cadastra-se</a>
+                               
 			</form>
 		</div>
+               
+            
 	</body>
 </html>
